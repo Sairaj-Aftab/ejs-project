@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+h1{
+    background-color: blue;
+    color: white;
+}
+
+img{
+    max-width: 100%;
+}
+.students img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+tr{
+    vertical-align: middle;
+}
+
+/* Single Student */
+.single img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+.single .info{
+    text-align: center;
+    background-color: #ccc;
+    border-radius: 6px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+/* Update */
+
+.update img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}

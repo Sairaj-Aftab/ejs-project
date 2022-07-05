@@ -1,0 +1,39 @@
+
+    <div class="container update mt-3">
+        <div class="row justify-content-center">
+          <div class="col-md-5">
+            <a class="btn btn-primary btn-sm" href="/students">Back</a>
+            <br>
+            <br>
+            <div class="card">
+              <div class="card-header">
+                <h4>Update Data</h4>
+              </div>
+              <div class="card-body">
+                <form action="/students/update/<% stuData.id %>" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="_method" value="put">
+                  <div class="form-group my-1">
+                      <label for="">Name*</label>
+                      <input value="<%= stuData.name %>" name="name" type="text" class="form-control">
+                  </div>
+                  <div class="form-group my-1">
+                      <label for="">Phone Number*</label>
+                      <input value="<%= stuData.phone %>" name="phone" type="text" class="form-control">
+                  </div>
+                  <div class="form-group my-1">
+                    <input value="<%= stuData.photo %>" name="old_photo" type="text"><br>
+                    <img style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%;" src="/assets/upload/<%= stuData.photo %> " alt="">
+                  </div>
+                  <div class="form-group my-1">
+                      <label for="">Image*</label>
+                      <input name="photo" type="file">
+                  </div>
+                  <div class="form-group mt-3">
+                      <input type="submit" class="btn btn-primary btn-sm w-100">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
