@@ -63,13 +63,14 @@ const updateData = async (req, res) => {
     }, {
         new : true
     })
-    res.redirect('students')
+    res.redirect('/students')
 }
 
 const deleteSingle = async (req, res) => {
-    let deleteData = await Students.findByIdAndDelete(req.params.id)
-    console.log(req.body);
-    res.render('students')
+
+    await Students.findByIdAndDelete(req.params.id)
+    res.redirect('/students')
+
 }
 
 

@@ -19,12 +19,13 @@ const upload = multer({
 
 }).single('photo')
 
-router.delete('/:id', deleteSingle)
 router.get('/', getAllStudents)
 router.post('/', upload, createStudent)
 router.get('/create', showForm)
 router.get('/:id', getSingle)
+router.post('/update/:id', upload, updateData)
 router.get('/update/:id', updateDataShow)
-router.put('/update/:id', upload, updateData)
+router.get('/delete/:id', deleteSingle)
 
-module.exports = router
+
+module.exports = router;
